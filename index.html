@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Documentation (Practice Only)</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header><h1>HTML Docs</h1></header>
+        <ul id="menu-list">
+            
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#basic_structure">Basic Structure</a></li>
+            <li><a class="nav-link" href="#head">Head</a></li>
+            <li><a class="nav-link" href="#body">Body</a></li>
+            <li><a class="nav-link" href="#tags">Tags</a></li>
+            <li><a class="nav-link" href="#attributes">Attributes</a></li>
+            
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header><h2>Introduction</h2></header>
+            <article>
+                <p>HTML is the standard markup language for webpages used to structure a web page and its contents.</p>
+                <p>HTML is made up of a collection of elements or tags, that wrap around different parts of content on a page which allow content to appear or behave a certain way.</p>
+                <pre><span>&lt;html&gt;...&lt;/html&gt;</span></pre>
+                <p>Tags can make text appear as a large heading or as a link to another page.  They can create bulleted lists or even display an image.</p>
+                <p>This technical document will go over the basics of HTML.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="basic_structure">
+            <header><h2>Basic Structure</h2></header>
+            <article>
+                <p>The basic structure of a HTML file is as follows,</p>
+                
+                    
+            <pre>
+<span>&lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</span></pre>
+                
+
+                <p>This is how all HTML documents start.  A <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tag pair within a <code>&lt;html&gt;</code> tag pair</p>
+                <p>The <code>head</code> tag is used to contain metadata about the page such as what character set the page is usingf, device information and compatibility information.  Metadata is not displayed.</p>
+                <p>The head also contains link tags that allow us to link stylesheets (CSS), for the visual styling of the page and javascript file (JS), for interaction on the page.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="head">
+            <header><h2>Head</h2></header>
+            <article>
+                <p>The &lt;head&gt; element goes before the body element within the &lt;html&gt; element.  The head of the document contains all of the metadata, links to external css and JS files and the all important page &lt;title&gt; element.</p>
+
+                
+    <pre><span>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="sylesheet" href="styles.css"&gt;
+    &lt;script src="script.js"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;</span></pre>
+    
+
+                <ul>
+                    <li><span>meta</span> - The meta tag allows us to provide document metadata that cannot be represented by other elements. Such as charset, the documents character encoding.  Or the device width details.</li>
+                    <li><span>link</span> - The link element specifies relationships between the documents it is added to and an external recourse.  THe main example is an external CSS file.  THe link element allows us to link the style sheet to the document so they can be physically separated.  We can also link external icon sets or even fonts such as Google fonts.</li>
+                    <li><span>script</span> - The script element allows us to embed execuatable code such as JavaScript.  The code can either be entered between the tags in the HTML doc, or the src attribute can be used to link an external JS document, similar to how the link element works for a CSS file.</li>
+                    <li><span>title</span> - The title element allows us to provide a title for the page.  This served a few purposes.  Firstly it will display this title in the browsers title bar and browser tab.  Secondly, it plays a role in Search Engine Optimisation (SEO) a good, descriptive title helps with SEO.</li>
+                </ul>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="body">
+            <header><h2>Body</h2></header>
+            <article>
+                <p>All the content that you see in the browser tab viewport is stored between the tags of the &lt;body&gt; element, there can only be one of these elements in a document.  The use of general divider/sections/container based elements is used to create the overall layout of the page as shown below.</p>
+                <img src="images/css_grid_layout_template_1.gif">
+            </article>
+        </section>
+
+        <section class="main-section" id="tags">
+            <header><h2>Tags</h2></header>
+            <article>
+                <p>Tags are the building blocks of web pages, there are no web pages without them.  Below shows the structrure of a tag.</p>
+                <img id="tag-image" src="images/grumpy-cat-small.png">
+                <p>There are numerous tags that can be used in HTML, all serving a specific purpose a few of which are detailed below.</p>
+                <ul id="tag-list">
+                    <li class="tag-description">
+                        <span><code>&lt;p&gt;</code></span> - This is the paragraph element, one of the basic and most used elements for structring text.  
+                    </li>
+                    <li class="tag-description">
+                        <span><code>&lt;div&gt;</code></span> - This the <code>&lt;div&gt;</code> element.  A <code>&lt;div&gt;</code> defines a division or a section of in a HTML document.  It is best to think of a <code>&lt;div&gt;</code> as a container for other elements to be stored which can be easily accessed and styled with CSS or manipulated with JS.
+                    </li>
+                    <li class="tag-description">
+                        <span><code>&lt;h1&gt;</code></span> - This is the <code>&lt;h1&gt;</code> element.  This represents the main heading of a page.  Only one of these should be used per page as search engines and screen readers are specifically looking for this elements to determine what the page is about.  There is a heirarchy of heading elements (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt</code>; and so on).  These can have multiple of the same tag however, as they will represent sub headings and indicate different sections.
+                    </li>
+                    <li class="tag-description">
+                        <span><code>&lt;ul&gt;</code></span> - This the unordered list element. In combination with <code>&lt;li&gt;</code> elements which are nested inside of it, you can create lists of text for a recipe or links and turn them into a navigation bar.  In fact, this section of text you are reading is in a <code>&lt;li&gt;</code> element within a <code>&lt;ul&gt;</code> element. 
+                    </li>
+                    <li class="tag-description">
+                        <span><code>&lt;code&gt;</code></span> - This element is wrapped around a section of text and formats it using your systems defualt monospace font to make it look like terminal text.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="attributes">
+            <header><h2>Attributes</h2></header>
+            <article>
+                <p>Attributes are features of elements in HTML.  Attributes are values that can configure elements or modify their behaviour in some way.  Attributes are available for tags in the head or body of a document.</p>
+                <p>Some attribute examples are as follows.</p>
+                <ul>
+                    <li><code>class</code> - This is the class attribute.  All tags with the same class attribute can have their styles modified with a single class selector in CSS.</li>
+                    <li><code>id</code> - The id attribute allows us to single out an element from the rest of the document.  An id attribute value must be unique accross the entire document, it cannot be used by more than one element.  This allows us to style an individual element amoung a group of the same elemet types, or tie an element to another funcitonaly, such as an input lable to the specific input.</li>
+                    <li><code>maxlength</code> - The maxlength attribute is used for form validation.  We can control the maximum number of characters in a textbox with this attribute.  If the number is exceeded, the browser will produce an alert, warning the user of the issue.</li>
+                    <li><code>for</code> - The for attribute ties a &lt;label&gt; to an &lt;input&gt; element.  The for attribute on the &lt;label&gt; element relates to the id attribute on the  &lt;input&gt; element.</li>
+                    <li><code>required</code> - This attribute is another form validation control.  It forces the user to input a value and will show an alert message if an attempt is made to submit an incomplete form.</li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+
+</body>
+</html>
